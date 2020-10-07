@@ -1,19 +1,20 @@
 {
-  "name": "setup-nodejs",
+  "name": "discord-bot",
   "version": "1.0.0",
-  "description": "This repository is my template for NodeJS projects, using TypeScript, Prettier, ESLint and EditorConfig",
-  "main": "src/server.ts",
-  "repository": "git@github.com:williamtorres1/setup-nodejs.git",
+  "description": "A discord bot for my friend and her server.",
+  "main": "src/bot.ts",
+  "repository": "git@github.com:williamtorres1/discord-bot.git",
   "author": "William Torres <williamtorres074@gmail.com>",
   "license": "MIT",
   "private": false,
   "scripts": {
     "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored",
-    "start": "node dist/server.js",
-    "dev:server": "ts-node-dev -r tsconfig-paths/register --respawn --inspect --transpile-only --ignore-watch node_modules src/server.ts",
+    "start": "node dist/bot.js",
+    "dev:server": "ts-node-dev -r tsconfig-paths/register --respawn --inspect --transpile-only --ignore-watch node_modules src/bot.ts",
     "test": "jest"
   },
   "dependencies": {
+    "discord.js": "^12.3.1",
     "express": "^4.17.1"
   },
   "devDependencies": {
